@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Corner - Blog Pecinta Badminton</title>
+  <meta name="description" content="Website blog badminton berisi sejarah, tips & trik, peralatan, turnamen, dan galeri komunitas pecinta bulutangkis.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; background-color: #f3f7f3; color: #1f2937; }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    .green-gradient {
+      background: linear-gradient(135deg, #18a558 0%, #00b37d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-section {
+      background-image: url('https://asset-2.tribunnews.com/bengkulu/foto/bank/images/Poster-Timnas-Badminton-Indonesia-Dicibir-Netizen-Gegara-Pakai-AI.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #18a558;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: white;
+      border: 4px solid #18a558;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    .right::after {
+      left: -13px;
+    }
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-item::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      .left::after, .right::after {
+        left: 18px;
+      }
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-shuttlecock text-3xl green-gradient"></i>
+        <h1 class="text-2xl font-bold green-gradient">Smash Corner</h1>
+      </div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#beranda" class="hover:text-green-600">Beranda</a>
+        <a href="#profil" class="hover:text-green-600">Profil</a>
+        <a href="#tips" class="hover:text-green-600">Tips & Trik</a>
+        <a href="#peralatan" class="hover:text-green-600">Peralatan</a>
+        <a href="#berita" class="hover:text-green-600">Berita</a>
+        <a href="#sejarah" class="hover:text-green-600">Sejarah</a>
+        <a href="#kontak" class="hover:text-green-600">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="beranda" class="min-h-screen flex items-center justify-center text-center hero-section text-white px-4">
+    <div class="hero-content">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">Selamat Datang di Smash Corner</h2>
+      <p class="text-lg mb-8 opacity-90">Blog inspiratif untuk pecinta dan pemain badminton di seluruh Indonesia.</p>
+      <a href="#tips" class="px-8 py-4 bg-white text-green-700 font-semibold rounded-full hover:bg-green-200 transition">Mulai Belajar</a>
+    </div>
+  </section>
+
+  <section id="profil" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold green-gradient mb-10 text-center">Profil</h2>
+      <p class="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+        Smash Corner adalah blog yang dibuat untuk para penggemar badminton. Kami menyediakan artikel,
+        tips bermain, informasi peralatan, berita turnamen, dan galeri foto inspiratif agar semakin banyak
+        orang mencintai olahraga ini. Kami percaya badminton bukan hanya olahraga, tetapi gaya hidup sehat!
+      </p>
+    </div>
+  </section>
+
+  <section id="tips" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold green-gradient mb-10 text-center">Tips & Trik Dasar Badminton</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Teknik Servis</h3>
+          <p class="text-gray-600 mb-4">Pelajari teknik servis backhand dan forehand agar permainan lebih bervariasi.</p>
+          <div class="text-gray-700">
+            <p class="mb-2"><strong>Servis Forehand:</strong> Dilakukan dengan posisi tubuh menyamping, kaki kiri di depan (untuk pemain tangan kanan). Ayunkan raket dari belakang ke depan dengan gerakan yang halus.</p>
+            <p class="mb-2"><strong>Servis Backhand:</strong> Posisi tubuh menghadap net, kaki sejajar. Pegang raket dengan grip backhand dan pukul shuttlecock dengan gerakan pergelangan tangan.</p>
+            <p><strong>Tips:</strong> Fokus pada akurasi bukan kekuatan, variasikan tinggi dan arah servis untuk mengacaukan lawan.</p>
+          </div>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Footwork</h3>
+          <p class="text-gray-600 mb-4">Pergerakan kaki yang cepat dan efisien membantu menguasai tempo permainan.</p>
+          <div class="text-gray-700">
+            <p class="mb-2"><strong>Posisi Siap:</strong> Berdiri dengan kaki selebar bahu, lutut sedikit ditekuk, berat badan bertumpu pada bola kaki.</p>
+            <p class="mb-2"><strong>Langkah Kecil:</strong> Gunakan langkah kecil dan cepat untuk penyesuaian posisi.</p>
+            <p class="mb-2"><strong>Langkah Besar:</strong> Untuk menjangkau shuttlecock yang jauh, gunakan langkah panjang dengan lunge.</p>
+            <p><strong>Tips:</strong> Selalu kembali ke posisi tengah setelah setiap pukulan, latih kecepatan reaksi dengan ladder drills.</p>
+          </div>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Netting</h3>
+          <p class="text-gray-600 mb-4">Kuasi teknik netting untuk mendapatkan penguasaan area depan lapangan.</p>
+          <div class="text-gray-700">
+            <p class="mb-2"><strong>Teknik Dasar:</strong> Pegang raket dengan grip forehand, posisikan diri dekat net, dan pukul shuttlecock dengan gerakan halus dari pergelangan tangan.</p>
+            <p class="mb-2"><strong>Tumbling Net Shot:</strong> Pukul shuttlecock dengan sudut yang membuatnya berputar dan jatuh tepat di sebelah net.</p>
+            <p class="mb-2"><strong>Net Kill:</strong> Ketika lawan mengembalikan shuttlecock tinggi di net, pukul dengan cepat ke bawah.</p>
+            <p><strong>Tips:</strong> Jaga keseimbangan tubuh, perhatikan gerakan lawan, dan siap untuk kembali ke posisi siap.</p>
+          </div>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Smash</h3>
+          <p class="text-gray-600 mb-4">Latih kekuatan tangan dan timing pukulan untuk menghasilkan smash mematikan.</p>
+          <div class="text-gray-700">
+            <p class="mb-2"><strong>Posisi:</strong> Posisikan diri di belakang shuttlecock, badan sedikit miring, dan siap untuk melompat.</p>
+            <p class="mb-2"><strong>Ayunan:</strong> Ayunkan raket dari belakang dengan gerakan penuh, putar bahu dan pinggang untuk menambah kekuatan.</p>
+            <p class="mb-2"><strong>Kontak:</strong> Pukul shuttlecock di titik tertinggi dengan sudut menukik ke bawah.</p>
+            <p><strong>Tips:</strong> Gabungkan lompatan untuk smash yang lebih kuat, variasikan arah smash untuk mengecoh lawan.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="peralatan" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold green-gradient mb-10 text-center">Peralatan Badminton</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">🏸 Raket Badminton</h3>
+          <p class="text-gray-700">Raket badminton modern terbuat dari bahan karbon, grafit, atau titanium yang ringan namun kuat. Faktor penting dalam memilih raket:</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Berat: Raket ringan (80-85g) untuk kecepatan, raket berat (90-95g) untuk kekuatan</li>
+            <li>Balance point: Head-light untuk kontrol, head-heavy untuk power</li>
+            <li>Kekakuan shaft: Flexible untuk pemula, stiff untuk pemain advanced</li>
+            <li>Tension senar: 20-30 lbs (semakin tinggi semakin kencang namun butuh teknik lebih baik)</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">🕊️ Shuttlecock</h3>
+          <p class="text-gray-700">Shuttlecock atau kok tersedia dalam dua jenis utama:</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Shuttlecock bulu asli: Terbuat dari bulu angsa, memberikan penerbangan yang stabil dan akurat, digunakan di turnamen profesional</li>
+            <li>Shuttlecock plastik: Lebih tahan lama dan ekonomis, cocok untuk latihan dan pemula</li>
+            <li>Kecepatan shuttlecock ditandai dengan warna ring: hijau (cepat), biru (medium), merah (lambat)</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">👟 Sepatu Badminton</h3>
+          <p class="text-gray-700">Sepatu khusus badminton memiliki karakteristik penting:</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Sol karet non-marking untuk cengkeraman optimal di lapangan</li>
+            <li>Desain mendukung gerakan lateral yang cepat</li>
+            <li>Cushioning yang baik untuk melindungi sendi dari dampak lompatan</li>
+            <li>Stabilitas pergelangan kaki untuk mencegah cedera</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">🧦 Kaos Kaki & Grip Raket</h3>
+          <p class="text-gray-700">Aksesori penting untuk kenyamanan dan performa:</p>
+          <ul class="list-disc ml-5 mt-2 text-gray-700">
+            <li>Kaos kaki: Pilih yang menyerap keringat dengan baik dan memiliki bantalan tambahan</li>
+            <li>Grip raket: Tersedia dalam berbagai bahan (kulit, towel, synthetic) dan ketebalan</li>
+            <li>Grip overgrip: Mudah diganti, menambah kenyamanan dan cengkeraman</li>
+            <li>Accessories lain: Wristband, headband, tas raket, dan shuttlecock tube</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="berita" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold green-gradient mb-10 text-center">Berita Badminton</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Anthony Ginting Juara Indonesia Open 2024</h3>
+          <p class="text-gray-600 mb-2">15 Juni 2024</p>
+          <p class="text-gray-700">Anthony Sinisuka Ginting berhasil merebut gelar juara Indonesia Open 2024 setelah mengalahkan Viktor Axelsen dari Denmark dengan skor 21-19, 15-21, 21-18. Kemenangan ini menjadi gelar Indonesia Open pertama bagi Ginting setelah dua kali menjadi runner-up.</p>
+          <a href="#" class="inline-block mt-4 text-green-600 hover:text-green-800 font-semibold">Baca selengkapnya →</a>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Apriyani/Fadia Raih Gelar Kedua di All England 2024</h3>
+          <p class="text-gray-600 mb-2">18 Maret 2024</p>
+          <p class="text-gray-700">Ganda putri Indonesia, Apriyani Rahayu dan Siti Fadia Silva Ramadhanti, berhasil mempertahankan gelar All England mereka setelah mengalahkan pasangan China dengan skor 21-17, 21-19. Ini menjadi gelar All England kedua bagi pasangan ini.</p>
+          <a href="#" class="inline-block mt-4 text-green-600 hover:text-green-800 font-semibold">Baca selengkapnya →</a>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Jonatan Christie Masuk 5 Besar Dunia</h3>
+          <p class="text-gray-600 mb-2">1 Juli 2024</p>
+          <p class="text-gray-700">BWF World Rankings terbaru menempatkan Jonatan Christie di peringkat 4 dunia setelah konsisten tampil baik di berbagai turnamen. Ini merupakan pencapaian tertinggi Jojo dalam kariernya.</p>
+          <a href="#" class="inline-block mt-4 text-green-600 hover:text-green-800 font-semibold">Baca selengkapnya →</a>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-2xl font-bold mb-3">Persiapan Tim Indonesia Menuju Olimpiade Paris 2024</h3>
+          <p class="text-gray-600 mb-2">25 Juni 2024</p>
+          <p class="text-gray-700">PBSI telah mengumumkan 8 wakil Indonesia yang akan bertanding di Olimpiade Paris 2024. Mereka akan menjalani training camp di Prancis selama 3 minggu sebelum pertandingan dimulai.</p>
+          <a href="#" class="inline-block mt-4 text-green-600 hover:text-green-800 font-semibold">Baca selengkapnya →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sejarah" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold green-gradient mb-10 text-center">Sejarah Badminton</h2>
+      
+      <div class="mb-16">
+        <h3 class="text-3xl font-bold text-center mb-8 green-gradient">Sejarah Badminton Dunia</h3>
+        <div class="bg-white p-8 rounded-xl shadow">
+          <p class="text-gray-700 mb-4">
+            Badminton adalah olahraga yang dimainkan dengan raket dan shuttlecock (kok) yang telah ada sejak berabad-abad lalu. Akar sejarahnya dapat ditelusuri kembali ke zaman Yunani Kuno, Tiongkok, dan India.
+          </p>
+          <div class="timeline">
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">Abad ke-5 SM</h4>
+                <p class="text-gray-700">Permainan serupa badminton dimainkan di Yunani Kuno dengan nama "Battledore and Shuttlecock".</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">Abad ke-19</h4>
+                <p class="text-gray-700">Olahraga ini berkembang di India dengan nama "Poona", diambil dari nama kota Pune. Tentara Inggris yang bertugas di India membawa permainan ini ke Inggris.</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">1873</h4>
+                <p class="text-gray-700">Duke of Beaufort memperkenalkan permainan ini di kediamannya, Badminton House di Gloucestershire, Inggris. Nama "badminton" diambil dari nama tempat ini.</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">1893</h4>
+                <p class="text-gray-700">Asosiasi Badminton Inggris (Badminton Association of England) didirikan dan aturan resmi pertama dibuat.</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">1899</h4>
+                <p class="text-gray-700">Kejuaraan All England pertama diselenggarakan, menjadi turnamen badminton tertua di dunia.</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">1934</h4>
+                <p class="text-gray-700">Federasi Bulu Tangkis Internasional (IBF) didirikan dengan 9 negara anggota: Kanada, Denmark, Inggris, Prancis, Irlandia, Belanda, Selandia Baru, Skotlandia, dan Wales.</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <h4 class="font-bold text-lg mb-2">1992</h4>
+                <p class="text-gray-700">Badminton menjadi olahraga Olimpiade resmi di Barcelona, Spanyol.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-3xl font-bold text-center mb-8 green-gradient">Sejarah Badminton Indonesia</h3>
+        <div class="bg-white p-8 rounded-xl shadow">
+          <p class="text-gray-700 mb-4">
+            Badminton di Indonesia memiliki sejarah yang panjang dan penuh prestasi. Olahraga ini diperkenalkan oleh penjajah Belanda dan dengan cepat menjadi olahraga yang sangat populer di Indonesia.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">1930-an</h4>
+                <p class="text-gray-700">Badminton diperkenalkan di Indonesia oleh penjajah Belanda. Klub-klub badminton mulai bermunculan di kota-kota besar seperti Jakarta, Bandung, dan Surabaya.</p>
+              </div>
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">1951</h4>
+                <p class="text-gray-700">Persatuan Bulutangkis Seluruh Indonesia (PBSI) didirikan pada tanggal 5 Mei 1951 di Jakarta.</p>
+              </div>
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">1958</h4>
+                <p class="text-gray-700">Indonesia pertama kali memenangkan Piala Thomas (kejuaraan beregu putra dunia) di Singapura, mengalahkan Malaysia.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">1970-an</h4>
+                <p class="text-gray-700">Era keemasan badminton Indonesia dimulai dengan munculnya legenda seperti Rudy Hartono yang memenangkan All England 8 kali.</p>
+              </div>
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">1992</h4>
+                <p class="text-gray-700">Indonesia meraih medali emas Olimpiade pertama di Barcelona melalui Susi Susanti (tunggal putri) dan Alan Budikusuma (tunggal putra).</p>
+              </div>
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-lg mb-2">Sekarang</h4>
+                <p class="text-gray-700">Indonesia tetap menjadi kekuatan utama dalam dunia badminton dengan atlet-atlet seperti Anthony Ginting, Jonatan Christie, dan Gregoria Mariska Tunjung.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold green-gradient mb-6">Kontak</h2>
+      <p class="text-gray-600 mb-8">Punya saran, pertanyaan, atau ingin bekerja sama? Kirim pesan Anda melalui formulir berikut.</p>
+      <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 border rounded-lg">
+        <input type="email" placeholder="Email" class="w-full px-4 py-3 border rounded-lg">
+        <textarea rows="4" placeholder="Pesan" class="w-full px-4 py-3 border rounded-lg"></textarea>
+        <button class="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-10 text-center">
+    <p class="text-gray-400">© 2024 Smash Corner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
